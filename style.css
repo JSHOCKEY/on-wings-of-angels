@@ -329,7 +329,7 @@ table {
 
 .story-content {
   margin: 0 auto;
-  padding: 60px;
+  padding: 50px 30px;
   background: var(--lightgray);
   border-radius: 15px;
   display: flex;
@@ -337,6 +337,12 @@ table {
   align-items: flex-start;
   flex-direction: column;
   gap: 30px 60px;
+}
+
+@media screen and (min-width: 500px) {
+  .story-content {
+    padding: 60px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -532,7 +538,7 @@ table {
   line-height: 40px;
   font-weight: bold;
   text-align: center;
-  padding: 20px 0 0;
+  padding: 30px 0 0;
   border-top: 1px solid var(--accent);
 }
 
@@ -581,6 +587,19 @@ table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+}
+
+@media screen and (max-width: 549px) {
+  .grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .card {
+    width: 225px;
+    flex-shrink: 0;
+  }
 }
 
 .card {
