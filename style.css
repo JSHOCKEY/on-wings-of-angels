@@ -135,7 +135,7 @@ table {
 /* HERO */
 /* ============================================================== */
 .hero {
-  padding: 60px 0 75px;
+  padding: 60px 0 70px;
   background: url('./images/hero.webp') no-repeat;
   background-position: center;
   background-size: cover;
@@ -175,7 +175,7 @@ table {
 .hero::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 60px;
@@ -323,8 +323,14 @@ table {
 /* ============================================================== */
 .story-section {
   margin: 0;
-  padding: 50px 0 100px;
+  padding: 30px 0 80px;
   background: var(--white);
+}
+
+@media screen and (min-width: 500px) {
+  .story-section {
+    padding: 50px 0 100px;
+  }
 }
 
 .story-content {
@@ -400,8 +406,14 @@ table {
 /* ============================================================== */
 .reviews-section {
   margin: 0;
-  padding: 0 0 100px;
+  padding: 0 0 80px;
   background: var(--bwhite);
+}
+
+@media screen and (min-width: 500px) {
+  .reviews-section {
+    padding: 0 0 100px;
+  }
 }
 
 .reviews-content {
@@ -514,8 +526,14 @@ table {
 /* ============================================================== */
 .features {
   margin: 0;
-  padding: 0 0 100px;
+  padding: 0 0 80px;
   background: var(--white);
+}
+
+@media screen and (min-width: 500px) {
+  .features {
+    padding: 0 0 100px;
+  }
 }
 
 .features-header {
@@ -581,8 +599,30 @@ table {
   color: var(--darkgray);
 }
 
-.grid {
+.grid-container {
   position: relative;
+}
+
+.grid-container::before {
+  display: none;
+}
+
+@media screen and (max-width: 549px) {
+  .grid-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -50px;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.8) 35%, rgba(255, 255, 255, 1) 50%);
+    pointer-events: none;
+    z-index: 2;
+  }
+}
+
+.grid {
   margin: 50px 0 0;
   padding: 0;
   display: grid;
@@ -600,25 +640,6 @@ table {
   .card {
     width: 225px;
     flex-shrink: 0;
-  }
-}
-
-.grid::before {
-  display: none;
-}
-
-@media screen and (max-width: 549px) {
-  .grid::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: -50px;
-    width: 100px;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.8) 35%, rgba(255, 255, 255, 1) 50%);
-    pointer-events: none;
-    z-index: 2;
   }
 }
 
@@ -649,8 +670,14 @@ table {
 /* ============================================================== */
 .bookend {
   margin: 0;
-  padding: 100px 0;
+  padding: 80px 0;
   background: var(--lightgray);
+}
+
+@media screen and (min-width: 500px) {
+  .bookend {
+    padding: 100px 0;
+  }
 }
 
 .bookend-title {
