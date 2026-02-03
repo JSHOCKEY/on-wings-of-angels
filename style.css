@@ -374,8 +374,15 @@ table {
 .story-copy p {
   margin: 20px 0 0;
   padding: 0;
-  font-size: 21px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+@media screen and (min-width: 700px) {
+  .story-copy p {
+    font-size: 21px;
+    line-height: 32px;
+  }
 }
 
 .story-copy p:first-child {
@@ -525,6 +532,15 @@ table {
   line-height: 40px;
   font-weight: bold;
   text-align: center;
+  padding: 20px 0 0;
+  border-top: 1px solid var(--accent);
+}
+
+@media screen and (min-width: 550px) {
+  .features-title {
+    padding: 0;
+    border: none;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -678,6 +694,16 @@ table {
 @media screen and (min-width: 1100px) {
   .seperator {
     display: block;
+  }
+}
+
+.journey {
+  text-align: center;
+}
+
+@media screen and (min-width: 1100px) {
+  .journey {
+    text-align: left;
   }
 }
 
