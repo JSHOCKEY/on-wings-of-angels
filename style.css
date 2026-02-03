@@ -532,6 +532,14 @@ table {
   text-align: center;
 }
 
+.bookend-copy a {
+  transition: all .25s;
+}
+
+.bookend-copy a:hover {
+  color: var(--accent)
+}
+
 .cta-buttons {
   margin: 0 auto;
   display: flex;
@@ -548,6 +556,14 @@ table {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.cta-trust a {
+  transition: all .25s;
+}
+
+.cta-trust a:hover {
+  color: var(--accent)
 }
 
 /* ============================================================== */
