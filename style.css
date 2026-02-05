@@ -8,7 +8,8 @@
   --yellow: #FCE908;
   --lightgray: #f9f7f5;
   --gray: #acacac;
-  --darkgray: #848484;
+  --darkgray: #252525;
+  --copygray: #848484;
 }
 
 /* ============================================================== */
@@ -407,7 +408,7 @@ table {
 .reviews-section {
   margin: 0;
   padding: 0 0 80px;
-  background: var(--bwhite);
+  background: var(--white);
 }
 
 @media screen and (min-width: 500px) {
@@ -419,7 +420,7 @@ table {
 .reviews-content {
   margin: 0 auto;
   padding: 60px 20px;
-  background: var(--black);
+  background: var(--darkgray);
   border-radius: 15px;
 }
 
@@ -597,7 +598,7 @@ table {
   font-size: 17px;
   line-height: 25px;
   text-align: center;
-  color: var(--darkgray);
+  color: var(--copygray);
 }
 
 .grid-container {
@@ -788,7 +789,7 @@ table {
   top: 0;
   width: 300px;
   height: 100vh;
-  background: var(--black);
+  background: var(--darkgray);
   color: var(--white);
   padding: 40px 30px;
   box-shadow: 5px 0px 15px 0px rgba(0, 0, 0, 0.5);
