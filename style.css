@@ -458,7 +458,7 @@ table {
   font-size: 25px;
   line-height: 29px;
   margin-bottom: 10px;
-  color: var(--white);
+  color: var(--accent)
 }
 
 @media screen and (min-width: 700px) {
@@ -469,17 +469,17 @@ table {
 }
 
 .review .review-header p {
-  font-size: 17px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 23px;
   color: var(--gray);
 }
 
 .review p {
   margin: 0 auto;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 17px;
+  line-height: 28px;
   color: var(--white);
-  max-width: 650px;
+  max-width: 700px;
 }
 
 .swiper-button-next,
@@ -503,12 +503,13 @@ table {
   margin: 0 10px !important;
   width: 20px !important;
   height: 20px !important;
-  background: var(--accent) !important;
+  background: none !important;
+  border: 2px solid var(--accent) !important;
   opacity: 1 !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--yellow) !important;
+  background: var(--accent) !important;
 }
 
 @media (max-width: 768px) {
