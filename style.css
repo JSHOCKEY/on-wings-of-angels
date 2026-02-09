@@ -37,6 +37,12 @@ body {
   color: var(--black);
   background-color: var(--white);
   overflow-x: hidden;
+  max-width: 100vw;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 main {
@@ -155,8 +161,14 @@ table {
   gap: 60px;
   position: relative;
   z-index: 2;
-  padding: 60px;
+  padding: 60px 40px;
   max-width: 1240px;
+}
+
+@media screen and (min-width: 1240px) {
+  .ghost-flex {
+    padding: 60px;
+  }
 }
 
 .ghost-image {
