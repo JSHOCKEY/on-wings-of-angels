@@ -9,7 +9,7 @@
   --blue: #1A67AD;
   --lightgray: #f9f7f5;
   --gray: #acacac;
-  --darkgray: #252525;
+  --darkgray: #242424;
   --copygray: #848484;
 }
 
@@ -201,7 +201,7 @@ table {
 
 .ghost-image a {
   position: sticky;
-  top: 30px;
+  top: 80px;
 }
 
 .ghost-image img {
@@ -232,7 +232,7 @@ table {
 
 @media screen and (min-width: 500px) {
   .hero {
-    padding: 80px 0 95px;
+    padding: 100px 0 115px;
   }
 }
 
