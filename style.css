@@ -200,6 +200,7 @@ table {
 }
 
 .ghost-image a {
+  margin-top: 45px;
   position: sticky;
   top: 80px;
 }
@@ -232,7 +233,7 @@ table {
 
 @media screen and (min-width: 500px) {
   .hero {
-    padding: 100px 0 115px;
+    padding: 120px 0;
   }
 }
 
@@ -475,14 +476,14 @@ table {
 /* STORY */
 /* ============================================================== */
 .story-section {
-  padding: 30px 0 0;
+  padding: 50px 0 0;
   background: var(--white);
   position: relative;
 }
 
 @media screen and (min-width: 500px) {
   .story-section {
-    padding: 50px 0 0;
+    padding: 80px 0 0;
   }
 }
 
