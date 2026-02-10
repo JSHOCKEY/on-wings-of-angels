@@ -882,8 +882,31 @@ table {
   display: none;
 }
 
+.grid-container::after {
+  display: none;
+}
+
 @media screen and (max-width: 549px) {
   .grid-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.8) 65%, rgba(255, 255, 255, 0) 85%);
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .grid-container.scrolled::before {
+    opacity: 1;
+  }
+
+  .grid-container::after {
     content: "";
     display: block;
     position: absolute;
@@ -923,6 +946,12 @@ table {
   background: var(--lightgray);
   border-radius: 15px;
   overflow: hidden;
+}
+
+@media screen and (max-width: 549px) {
+  .card:last-child {
+    margin-right: 70px;
+  }
 }
 
 .card h4 {
@@ -1028,26 +1057,29 @@ table {
   color: var(--accent)
 }
 
-.seperator {
-  display: none;
-}
-
-@media screen and (min-width: 1100px) {
-  .seperator {
-    display: block;
-  }
-}
-
 .journey {
   margin: 0 auto;
-  max-width: 250px;
+  max-width: 350px;
   text-align: center;
+  font-size: 21px;
+  line-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px 10px;
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 650px) {
   .journey {
-    margin: 0;
     max-width: none;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
+}
+
+.journey span {
+  font-size: 35px;
 }
