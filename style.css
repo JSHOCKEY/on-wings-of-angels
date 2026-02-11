@@ -203,16 +203,51 @@ table {
   margin-top: 45px;
   position: sticky;
   top: 80px;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: all .25s;
+  overflow: hidden;
+}
+
+.ghost-image a:hover {
+  transform: scale(1.05);
+}
+
+.ghost-image a::before {
+  content: "Buy Now on\A Amazon";
+  white-space: pre-line;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  width: 100%;
+  padding: 15px;
+  background: var(--yellow);
+  color: #443833;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: translateY(100%);
+  transition: all 0.25s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+.ghost-image a:hover::before {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .ghost-image img {
   max-width: 260px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  transition: all .25s;
-}
 
-.ghost-image img:hover {
-  transform: scale(1.05);
+  position: relative;
 }
 
 .ghost-content {
