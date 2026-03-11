@@ -319,6 +319,48 @@
         }
       });
     }
+
+    // Scroll Animation for Story Section
+    const storySection = document.querySelector('.story-section');
+    const storyTitle = document.querySelector('.story-title');
+    const storyCopy = document.querySelector('.story-copy');
+    const featuresSection = document.querySelector('.features');
+    const cards = document.querySelectorAll('.card');
+
+    const viewportCenter = window.innerHeight / 2;
+
+    function handleScroll() {
+      // Story Section Animation
+      if (storySection && storyTitle && storyCopy) {
+        const storyRect = storySection.getBoundingClientRect();
+        const storyTopToCenter = storyRect.top - viewportCenter;
+
+        if (storyTopToCenter <= 0 && !storyTitle.classList.contains('fade-in')) {
+          storyTitle.classList.add('fade-in');
+          storyCopy.classList.add('fade-in');
+        }
+      }
+
+      // Features Cards Animation
+      if (featuresSection && cards.length > 0) {
+        const featuresRect = featuresSection.getBoundingClientRect();
+        const featuresTopToCenter = featuresRect.top - viewportCenter;
+
+        if (featuresTopToCenter <= 0) {
+          cards.forEach((card, index) => {
+            if (!card.classList.contains('fade-in')) {
+              setTimeout(() => {
+                card.classList.add('fade-in');
+              }, index * 150); // 150ms stagger between cards
+            }
+          });
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    // Trigger on page load in case sections are already visible
+    handleScroll();
   </script>
 
 </body>
