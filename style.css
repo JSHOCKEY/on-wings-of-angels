@@ -1119,3 +1119,33 @@ table {
 .journey span {
   font-size: 35px;
 }
+
+/* ============================================================== */
+/* SCROLL ANIMATIONS */
+/* ============================================================== */
+.story-title {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.story-title.fade-in {
+  opacity: 1;
+}
+
+.story-copy {
+  opacity: 0;
+  transition: opacity 0.8s ease-out 0.3s;
+}
+
+.story-copy.fade-in {
+  opacity: 1;
+}
+
+.card {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+.card.fade-in {
+  opacity: 1;
+}
