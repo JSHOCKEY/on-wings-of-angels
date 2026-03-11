@@ -70,8 +70,8 @@
       <section class="hero">
         <div class="container hero-flex">
           <div class="hero-content">
-            <div class="rating" aria-label="5 star rating with 50 reviews"><img src="./images/5stars.webp"
-                alt="5 star rating on Amazon" loading="lazy"> <span><strong>5 Stars (50+
+            <div class="rating" aria-label="5 star rating with 60+ reviews"><img src="./images/5stars.webp"
+                alt="5 star rating on Amazon" loading="lazy"> <span><strong>5 Stars (60+
                   Reviews)</strong></span></div>
             <h1 class="title">On Wings of Angels</h1>
             <p class="copy">The unforgettable true story of one boy’s miraculous journey from the killing fields of
@@ -189,64 +189,7 @@
         <div class="reviews-content">
           <h2 class="reviews-title sr-only">What Readers Are Saying</h2>
           <div class="swiper" role="region" aria-label="Customer reviews carousel">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="review">
-                  <div class="review-header">
-                    <h3>Touching, Moving and Inspiring through Hope, Faith and Love</h3>
-                    <p>— Lisa A. Gentry on December 22, 2025</p>
-                  </div>
-                  <p>On the Wings of Angels is an unforgettable, soul-stirring journey that left me deeply moved and
-                    profoundly grateful to have found it. This book is a testament to the power of a mother's
-                    love—unyielding, sacrificial, and fiercely committed. It's the kind of story that wraps itself
-                    around your heart and lingers long after the final page.</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="review">
-                  <div class="review-header">
-                    <h3>Faith in God in our lives</h3>
-                    <p>— Steven J. Sternberg on January 3, 2026</p>
-                  </div>
-                  <p>The details that were provided by Mr. Sytnyk of his experience during his early life in the
-                    horrific environment of World War II were very insightful, emotional and ultimately overwhelming.
-                    Through his faith in God and the fundamental goodness of people, he was able to make it through.</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="review">
-                  <div class="review-header">
-                    <h3>Truth & Faith</h3>
-                    <p>— WBB on December 30, 2025</p>
-                  </div>
-                  <p>Very easy for anyone to read and enjoy. This is an amazing TRUE story that inspires one's own
-                    FAITH. An unexpected life adventure reminding us of our human capacity for horror but more
-                    importantly goodness.</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="review">
-                  <div class="review-header">
-                    <h3>This is an amazing story of hope, love, resilience, and faith.</h3>
-                    <p>— A. Marcell on January 18, 2026</p>
-                  </div>
-                  <p>This is an amazing story of hope, love, resilience, and faith. That anyone could endure such
-                    heartache and hardships from such an early age and still have a positive outlook on life is
-                    incredible.</p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="review">
-                  <div class="review-header">
-                    <h3>A must read! From reality to the heart.</h3>
-                    <p>— J Girardi on January 29, 2026</p>
-                  </div>
-                  <p>A moving piece of reality in a time period that overall we are failing to teach. In a time where
-                    words like "Nazi," "Death Camps," "Gestapo," "Hitler," and "Socialism" are used as casual
-                    adjectives, we need to take the time to realize the meaning of these words.</p>
-                </div>
-              </div>
-            </div>
+            <div class="swiper-wrapper" id="reviews-wrapper"></div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -275,17 +218,19 @@
         </div>
         <div class="cta-trust">
           <div class="rating" aria-label="5 star rating with 45 reviews"><img src="./images/5stars.webp"
-              alt="5 star rating on Amazon" loading="lazy"> <span><strong>5 Stars (50+
+              alt="5 star rating on Amazon" loading="lazy"> <span><strong>5 Stars (60+
                 Reviews)</strong></span></div>
         </div>
       </div>
     </section>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./reviews.js"></script>
   <script>
     // Reviews Carousel with Swiper
     const swiper = new Swiper('.swiper', {
       effect: 'fade',
+      autoHeight: true,
       fadeEffect: {
         crossFade: true
       },
