@@ -200,7 +200,6 @@ table {
 }
 
 .ghost-image a {
-  margin-top: 45px;
   position: sticky;
   top: 80px;
   border-radius: 5px;
@@ -245,8 +244,7 @@ table {
 }
 
 .ghost-image img {
-  max-width: 260px;
-
+  max-width: 300px;
   position: relative;
 }
 
