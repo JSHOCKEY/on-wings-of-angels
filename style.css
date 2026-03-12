@@ -270,7 +270,7 @@ table {
 @media screen and (min-width: 500px) {
   .hero {
     padding: 120px 0;
-    min-height: none;
+    min-height: unset;
   }
 }
 
@@ -522,6 +522,11 @@ table {
   .story-section {
     padding: 80px 0 0;
   }
+}
+
+#story-anchor {
+  position: absolute;
+  top: 60px;
 }
 
 .story-flex {
@@ -1150,4 +1155,51 @@ table {
 
 .card.fade-in {
   opacity: 1;
+}
+
+/* ============================================================== */
+/* SCROLL DOWN ARROW */
+/* ============================================================== */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.scroll-down-arrow-container {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+  color: var(--accent);
+  animation: bounce 2s infinite;
+}
+
+.scroll-down-arrow svg {
+  width: 64px;
+  height: 64px;
+}
+
+@media screen and (min-width: 500px) {
+  .scroll-down-arrow {
+    display: none;
+  }
+}
 }

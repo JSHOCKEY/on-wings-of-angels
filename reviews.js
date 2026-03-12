@@ -179,3 +179,16 @@
   });
 
 })();
+
+// Scroll down arrow functionality
+(function () {
+  const scrollArrow = document.querySelector('.scroll-down-arrow');
+  if (!scrollArrow) return;
+
+  scrollArrow.addEventListener('click', function () {
+    const anchor = document.getElementById('story-anchor');
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+})();
