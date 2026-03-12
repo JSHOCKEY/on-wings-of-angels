@@ -257,7 +257,7 @@ table {
 /* HERO */
 /* ============================================================== */
 .hero {
-  padding: 60px 0 70px;
+  padding: 40px 0 70px;
   background: url('./images/hero.webp') no-repeat;
   background-position: center;
   background-size: cover;
@@ -267,8 +267,13 @@ table {
 
 @media screen and (min-width: 500px) {
   .hero {
-    padding: 120px 0;
     min-height: unset;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .hero {
+    padding: 120px 0;
   }
 }
 
@@ -321,36 +326,54 @@ table {
 
 .hero-flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 60px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px 60px;
   position: relative;
   z-index: 2;
 }
 
+@media screen and (min-width: 900px) {
+  .hero-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
 .hero-image {
   flex: 1;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 400px;
+  order: -1;
 }
 
 @media screen and (min-width: 900px) {
   .hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 389px;
+    order: 2;
   }
 }
 
 .hero-image img {
-  max-width: 260px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  max-width: 150px;
+  box-shadow: unset;
   transition: all .25s;
 }
 
-.hero-image img:hover {
-  transform: scale(1.05);
+@media screen and (min-width: 900px) {
+  .hero-image img {
+    max-width: 260px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+
+  .hero-image img:hover {
+    transform: scale(1.05);
+  }
 }
 
 .hero-content {
