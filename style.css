@@ -733,7 +733,7 @@ table {
 
 .reviews-content {
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 60px 20px 90px;
   background: var(--darkgray);
   border-radius: 15px;
 }
