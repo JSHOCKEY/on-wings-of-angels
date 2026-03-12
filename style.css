@@ -347,9 +347,9 @@ table {
 
 @media screen and (min-width: 900px) {
   .hero-image {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     min-height: 389px;
     order: 2;
   }
