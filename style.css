@@ -264,11 +264,13 @@ table {
   background-position: center;
   background-size: cover;
   position: relative;
+  min-height: 90vh;
 }
 
 @media screen and (min-width: 500px) {
   .hero {
     padding: 120px 0;
+    min-height: none;
   }
 }
 
