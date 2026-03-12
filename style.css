@@ -257,7 +257,7 @@ table {
 /* HERO */
 /* ============================================================== */
 .hero {
-  padding: 80px 0;
+  padding: 60px 0 70px;
   background: url('./images/hero.webp') no-repeat;
   background-position: center;
   background-size: cover;
@@ -321,55 +321,36 @@ table {
 
 .hero-flex {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 30px 60px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
   position: relative;
   z-index: 2;
-}
-
-@media screen and (min-width: 900px) {
-  .hero-flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
 }
 
 .hero-image {
   flex: 1;
   display: none;
   max-width: 400px;
-  order: -1;
 }
 
 @media screen and (min-width: 900px) {
   .hero-image {
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     min-height: 389px;
-    order: 2;
   }
 }
 
 .hero-image img {
-  max-width: 150px;
-  box-shadow: unset;
+  max-width: 260px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   transition: all .25s;
 }
 
-@media screen and (min-width: 900px) {
-  .hero-image img {
-    max-width: 260px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  }
-
-  .hero-image img:hover {
-    transform: scale(1.05);
-  }
+.hero-image img:hover {
+  transform: scale(1.05);
 }
 
 .hero-content {
