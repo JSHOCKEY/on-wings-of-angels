@@ -257,7 +257,7 @@ table {
 /* HERO */
 /* ============================================================== */
 .hero {
-  padding: 40px 0 70px;
+  padding: 80px 0;
   background: url('./images/hero.webp') no-repeat;
   background-position: center;
   background-size: cover;
@@ -267,13 +267,8 @@ table {
 
 @media screen and (min-width: 500px) {
   .hero {
-    min-height: unset;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .hero {
     padding: 120px 0;
+    min-height: unset;
   }
 }
 
@@ -329,7 +324,7 @@ table {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  gap: 40px 60px;
+  gap: 30px 60px;
   position: relative;
   z-index: 2;
 }
@@ -345,15 +340,16 @@ table {
 
 .hero-image {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
   max-width: 400px;
   order: -1;
 }
 
 @media screen and (min-width: 900px) {
   .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 389px;
     order: 2;
   }
